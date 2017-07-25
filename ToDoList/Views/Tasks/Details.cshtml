@@ -1,0 +1,66 @@
+﻿@model ToDoList.Models.Task
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Task</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.List.ListTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.List.ListTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ListTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ListTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ListCreateDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ListCreateDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskDescriptions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaskDescriptions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsDone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DueDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DueDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TaskID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
