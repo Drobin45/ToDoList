@@ -21,6 +21,18 @@ namespace ToDoList.Controllers
             return View(tasks.ToList());
         }
 
+        public ActionResult Reminders()
+        {
+            var tasks = db.Tasks.Include(t => t.List);
+            return View(tasks.ToList());
+        }
+
+        public ActionResult Finished()
+        {
+            var tasks = db.Tasks.Include(t => t.List);
+            return View(tasks.ToList());
+        }
+
         // GET: Tasks/Details/5
         public ActionResult Details(int? id)
         {
